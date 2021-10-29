@@ -30,22 +30,19 @@
               })
       }
     </script>
-    <form>
+    <form id="form1">
       <input  
           type='text'
-          id="compliments"
-          placeholder="What is your compliment"/>
-      <input
-          type="text"
-          id="fortune"
-          placeholder="What is your fortune"
-      />
+          id="colorform"
+          placeholder="What is your color"/>
+      
       <button id="Phrases"> Enter phrases </button>
       
     </form>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
-      document.getElementById('Phrases').onclick = function () {
+      document.getElementById('form1').onsubmit = function (e) {
+        e.preventDefault()
         axios.get("http://localhost:4000/api/phrases/")
               .then(function (response){
                 const data = response.data;
@@ -57,7 +54,7 @@
 <button id ="numberButton"> Get a random list of numbers </button>
 
     
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
 <script>
   document.getElementById('numberButton').onclick = function () {
     axios.get("http://localhost:4000/api/numbers/")

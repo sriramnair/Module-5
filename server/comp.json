@@ -1,6 +1,12 @@
-{
+[{
     "id": 1,
-    "compliment": "You look good",
-    "fortune": "Your life will be great"
+    "color": "Green"
+    
+ }, 
 
-  }
+ {  
+   "id" : 2,
+    "color": "Blue"
+
+ }
+]
